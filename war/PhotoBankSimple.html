@@ -1,0 +1,1456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link type="text/css" rel="stylesheet" href="PhotoBank.css">
+<title>PhotoBank</title>
+<script type="text/javascript" language="javascript"
+	src="photobank/photobank.nocache.js"></script>
+<script type="text/javascript" language="javascript">
+var settings = {
+	vote:false,
+	liveinternet:true,
+	titlechange:false
+};
+var imghost = "http://findmapplaces.com/photoBank/";
+var hosts = [
+  		"http://muslib.ru/foto/astrahan2008/",
+  		"http://muslib.ru/foto/greece2008/part1/",
+  		"http://muslib.ru/foto/greece2008/serega/",
+  		"http://muslib.ru/foto/greece2008/kolia/",
+  		"http://muslib.ru/foto/greece2008/part2/",
+  		"http://muslib.ru/foto/greece2008/part3/",
+  		"http://muslib.ru/foto/india2008/",
+  		"http://muslib.ru/foto/hibini2009/",
+  		"http://muslib.ru/foto/horses05.09/",
+  		"http://muslib.ru/foto/austria2009/",
+  		"http://muslib.ru/foto/krim_velo_2007/",
+  		"http://muslib.ru/foto/21.01.08sb/",
+  		"http://muslib.ru/foto/21.01.08sb/pano/",
+  		"http://muslib.ru/foto/nepal2009/"
+  	];
+var photos = [{
+            "id": 1,
+            "title": "Волгоградский жд вокзал",
+            "srcHost": 0,
+            "file": "1.jpg",
+            "votes": 0,
+            "place": "Россия / Волгоград / Центральный Железнодорожный вокзал"
+        },
+        {
+            "id": 2,
+            "title": "Волгоградский жд вокзал",
+            "srcHost": 0,
+            "file": "2.jpg",
+            "votes": 1,
+            "place": "Россия / Волгоград / Центральный Железнодорожный вокзал"
+        },
+        {
+            "id": 3,
+            "title": "Монумент \"Стоять насмерть!\"",
+            "srcHost": 0,
+            "file": "3.jpg",
+            "votes": 1,
+            "place": "Россия / Волгоград / Мамаев Курган / Монумент \"Стоять насмерть\""
+        },
+        {
+            "id": 4,
+            "title": "Волгоград. \"Родина мать зовет\"",
+            "srcHost": 0,
+            "file": "4.jpg",
+            "votes": 3,
+            "place": "Россия / Волгоград / Мамаев Курган / Скульптура «Родина-мать зовёт!»"
+        },
+        {
+            "id": 5,
+            "title": "",
+            "srcHost": 0,
+            "file": "5.jpg",
+            "votes": 0,
+            "place": "Россия / Волгоград / Мамаев Курган / Зал Воинской Славы"
+        },
+        {
+            "id": 6,
+            "title": "",
+            "srcHost": 0,
+            "file": "6.jpg",
+            "votes": 1,
+            "place": "Россия / Волгоград / Мамаев Курган / Монумент «Скорбящая мать»"
+        },
+        {
+            "id": 7,
+            "title": "Волгоград. Переправа",
+            "srcHost": 0,
+            "file": "7.jpg",
+            "votes": 0,
+            "place": "Россия / автомобильная паромная переправа через Волгу"
+        },
+        {
+            "id": 8,
+            "title": "Волгоград. Переправа",
+            "srcHost": 0,
+            "file": "8.jpg",
+            "votes": 0,
+            "place": "Россия / автомобильная паромная переправа через Волгу"
+        },
+        {
+            "id": 9,
+            "title": "",
+            "srcHost": 0,
+            "file": "9.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 10,
+            "title": "",
+            "srcHost": 0,
+            "file": "10.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 11,
+            "title": "Конопля",
+            "srcHost": 0,
+            "file": "11.jpg",
+            "votes": 1,
+            "place": "Россия"
+        },
+        {
+            "id": 12,
+            "title": "Стоянка на берегу Ахтубы",
+            "srcHost": 0,
+            "file": "12.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 13,
+            "title": "",
+            "srcHost": 0,
+            "file": "13.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 14,
+            "title": "",
+            "srcHost": 0,
+            "file": "14.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 15,
+            "title": "",
+            "srcHost": 0,
+            "file": "15.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 16,
+            "title": "",
+            "srcHost": 0,
+            "file": "16.jpg",
+            "votes": 2,
+            "place": "Россия"
+        },
+        {
+            "id": 17,
+            "title": "",
+            "srcHost": 0,
+            "file": "17.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 18,
+            "title": "",
+            "srcHost": 0,
+            "file": "18.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 19,
+            "title": "",
+            "srcHost": 0,
+            "file": "19.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 20,
+            "title": "Скоробей везет какашечку",
+            "srcHost": 0,
+            "file": "20.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 21,
+            "title": "",
+            "srcHost": 0,
+            "file": "21.jpg",
+            "votes": 2,
+            "place": "Россия"
+        },
+        {
+            "id": 22,
+            "title": "",
+            "srcHost": 0,
+            "file": "22.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 23,
+            "title": "",
+            "srcHost": 0,
+            "file": "23.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 24,
+            "title": "",
+            "srcHost": 0,
+            "file": "24.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 25,
+            "title": "",
+            "srcHost": 0,
+            "file": "25.jpg",
+            "votes": 2,
+            "place": "Россия"
+        },
+        {
+            "id": 26,
+            "title": "",
+            "srcHost": 0,
+            "file": "26.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 27,
+            "title": "",
+            "srcHost": 0,
+            "file": "27.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 28,
+            "title": "",
+            "srcHost": 0,
+            "file": "28.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 29,
+            "title": "",
+            "srcHost": 0,
+            "file": "29.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 30,
+            "title": "",
+            "srcHost": 0,
+            "file": "30.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 31,
+            "title": "",
+            "srcHost": 0,
+            "file": "31.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 32,
+            "title": "",
+            "srcHost": 0,
+            "file": "32.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 33,
+            "title": "",
+            "srcHost": 0,
+            "file": "33.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 34,
+            "title": "Кафе",
+            "srcHost": 0,
+            "file": "34.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 35,
+            "title": "",
+            "srcHost": 0,
+            "file": "35.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 36,
+            "title": "Облака",
+            "srcHost": 0,
+            "file": "36.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 37,
+            "title": "",
+            "srcHost": 0,
+            "file": "37.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 38,
+            "title": "",
+            "srcHost": 0,
+            "file": "38.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 39,
+            "title": "",
+            "srcHost": 0,
+            "file": "39.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 40,
+            "title": "",
+            "srcHost": 0,
+            "file": "40.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 41,
+            "title": "",
+            "srcHost": 0,
+            "file": "41.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 42,
+            "title": "Пляж на Ахтубе",
+            "srcHost": 0,
+            "file": "42.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 43,
+            "title": "",
+            "srcHost": 0,
+            "file": "43.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 44,
+            "title": "",
+            "srcHost": 0,
+            "file": "44.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 45,
+            "title": "",
+            "srcHost": 0,
+            "file": "45.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 46,
+            "title": "",
+            "srcHost": 0,
+            "file": "46.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 47,
+            "title": "",
+            "srcHost": 0,
+            "file": "47.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 48,
+            "title": "",
+            "srcHost": 0,
+            "file": "48.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 49,
+            "title": "Дорога к озеру Баскунчак",
+            "srcHost": 0,
+            "file": "49.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 50,
+            "title": "",
+            "srcHost": 0,
+            "file": "50.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 51,
+            "title": "",
+            "srcHost": 0,
+            "file": "51.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 52,
+            "title": "",
+            "srcHost": 0,
+            "file": "52.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 53,
+            "title": "Телефонная будка",
+            "srcHost": 0,
+            "file": "53.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 54,
+            "title": "",
+            "srcHost": 0,
+            "file": "54.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 55,
+            "title": "",
+            "srcHost": 0,
+            "file": "55.jpg",
+            "votes": 0,
+            
+            "place": "пос. Нижний Баскунчак"
+        },
+        {
+            "id": 56,
+            "title": "Озеро Баскунчак",
+            "srcHost": 0,
+            "file": "56.jpg",
+            "votes": 0,
+            
+            "place": "Озеро Баскунчак"
+        },
+        {
+            "id": 57,
+            "title": "",
+            "srcHost": 0,
+            "file": "57.jpg",
+            "votes": 0,
+            
+            "place": "Озеро Баскунчак"
+        },
+        {
+            "id": 58,
+            "title": "Озеро Баскунчак",
+            "srcHost": 0,
+            "file": "58.jpg",
+            "votes": 0,
+            
+            "place": "Озеро Баскунчак"
+        },
+        {
+            "id": 59,
+            "title": "Озеро Баскунчак",
+            "srcHost": 0,
+            "file": "59.jpg",
+            "votes": 1,
+            
+            "place": "Озеро Баскунчак"
+        },
+        {
+            "id": 60,
+            "title": "Озеро Баскунчак",
+            "srcHost": 0,
+            "file": "60.jpg",
+            "votes": 0,
+            
+            "place": "Озеро Баскунчак"
+        },
+        {
+            "id": 61,
+            "title": "Озеро Баскунчак",
+            "srcHost": 0,
+            "file": "61.jpg",
+            "votes": 0,
+            "place": "Озеро Баскунчак"
+        },
+        {
+            "id": 62,
+            "title": "",
+            "srcHost": 0,
+            "file": "62.jpg",
+            "votes": 0,
+            "place": "пос. Нижний Баскунчак"
+        },
+        {
+            "id": 63,
+            "title": "",
+            "srcHost": 0,
+            "file": "63.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 64,
+            "title": "",
+            "srcHost": 0,
+            "file": "64.jpg",
+            "votes": 0,
+            "place": "пос. Нижний Баскунчак"
+        },
+        {
+            "id": 65,
+            "title": "",
+            "srcHost": 0,
+            "file": "65.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 66,
+            "title": "Степной закат",
+            "srcHost": 0,
+            "file": "66.jpg",
+            "votes": 1,
+            "place": "Россия"
+        },
+        {
+            "id": 67,
+            "title": "Закат",
+            "srcHost": 0,
+            "file": "67.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 68,
+            "title": "Ночная поездка",
+            "srcHost": 0,
+            "file": "68.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 69,
+            "title": "Свинья",
+            "srcHost": 0,
+            "file": "69.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 70,
+            "title": "",
+            "srcHost": 0,
+            "file": "70.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 71,
+            "title": "Деревня",
+            "srcHost": 0,
+            "file": "71.jpg",
+            "votes": 1,
+            "place": "Россия"
+        },
+        {
+            "id": 72,
+            "title": "Ласточки",
+            "srcHost": 0,
+            "file": "72.jpg",
+            "votes": 0,
+            "place": "Россия"
+        },
+        {
+            "id": 73,
+            "title": "",
+            "srcHost": 0,
+            "file": "73.jpg",
+            "votes": 1,
+            "place": "Россия"
+        },
+        {
+            "id": 74,
+            "title": "Муляж машины ДПС",
+            "srcHost": 0,
+            "file": "74.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 75,
+            "title": "Вид из палатки",
+            "srcHost": 0,
+            "file": "75.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 76,
+            "title": "Саранча на палатке",
+            "srcHost": 0,
+            "file": "76.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 77,
+            "title": "Спица альбинос",
+            "srcHost": 0,
+            "file": "77.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 78,
+            "title": "Подсолнух",
+            "srcHost": 0,
+            "file": "78.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 79,
+            "title": "Щенок",
+            "srcHost": 0,
+            "file": "79.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 80,
+            "title": "Пирамида Голода. Астрахань",
+            "srcHost": 0,
+            "file": "80.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 81,
+            "title": "Закат",
+            "srcHost": 0,
+            "file": "81.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 82,
+            "title": "Закат",
+            "srcHost": 0,
+            "file": "82.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 83,
+            "title": "Закат над рекой",
+            "srcHost": 0,
+            "file": "83.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 84,
+            "title": "Астраханский кремль",
+            "srcHost": 0,
+            "file": "84.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Астрахань / Астраханский кремль"
+        },
+        {
+            "id": 85,
+            "title": "Астраханский кремль",
+            "srcHost": 0,
+            "file": "85.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Астрахань / Астраханский кремль"
+        },
+        {
+            "id": 86,
+            "title": "Астраханский кремль. Праздник",
+            "srcHost": 0,
+            "file": "86.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Астрахань / Астраханский кремль"
+        },
+        {
+            "id": 87,
+            "title": "Автопортрет",
+            "srcHost": 0,
+            "file": "87.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Астрахань"
+        },
+        {
+            "id": 88,
+            "title": "Общежитие цыркачей",
+            "srcHost": 0,
+            "file": "88.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Астрахань"
+        },
+        {
+            "id": 89,
+            "title": "",
+            "srcHost": 0,
+            "file": "89.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 90,
+            "title": "",
+            "srcHost": 0,
+            "file": "90.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 91,
+            "title": "",
+            "srcHost": 0,
+            "file": "91.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 92,
+            "title": "",
+            "srcHost": 0,
+            "file": "92.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 93,
+            "title": "",
+            "srcHost": 0,
+            "file": "93.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 94,
+            "title": "",
+            "srcHost": 0,
+            "file": "94.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 95,
+            "title": "",
+            "srcHost": 0,
+            "file": "95.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 96,
+            "title": "",
+            "srcHost": 0,
+            "file": "96.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 97,
+            "title": "",
+            "srcHost": 0,
+            "file": "97.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 98,
+            "title": "",
+            "srcHost": 0,
+            "file": "98.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 99,
+            "title": "",
+            "srcHost": 0,
+            "file": "99.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 100,
+            "title": "",
+            "srcHost": 0,
+            "file": "100.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 101,
+            "title": "",
+            "srcHost": 0,
+            "file": "101.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 102,
+            "title": "",
+            "srcHost": 0,
+            "file": "102.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 103,
+            "title": "Дорожный закат",
+            "srcHost": 0,
+            "file": "103.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 104,
+            "title": "",
+            "srcHost": 0,
+            "file": "104.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 105,
+            "title": "Красивое облако",
+            "srcHost": 0,
+            "file": "105.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 106,
+            "title": "",
+            "srcHost": 0,
+            "file": "106.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 107,
+            "title": "",
+            "srcHost": 0,
+            "file": "107.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 108,
+            "title": "Стелла на въезде в Калмыкию",
+            "srcHost": 0,
+            "file": "108.jpg",
+            "votes": 1,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 109,
+            "title": "",
+            "srcHost": 0,
+            "file": "109.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 110,
+            "title": "Верблюжья колючка",
+            "srcHost": 0,
+            "file": "110.jpg",
+            "votes": 1,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 111,
+            "title": "",
+            "srcHost": 0,
+            "file": "111.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 112,
+            "title": "Пустыня",
+            "srcHost": 0,
+            "file": "112.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 113,
+            "title": "Пустынька",
+            "srcHost": 0,
+            "file": "113.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 114,
+            "title": "Прокол колеса",
+            "srcHost": 0,
+            "file": "114.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 115,
+            "title": "",
+            "srcHost": 0,
+            "file": "115.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 116,
+            "title": "",
+            "srcHost": 0,
+            "file": "116.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 117,
+            "title": "Мемориал погибшим",
+            "srcHost": 0,
+            "file": "117.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 118,
+            "title": "Летающий куст",
+            "srcHost": 0,
+            "file": "118.jpg",
+            "votes": 2,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 119,
+            "title": "Степной котенок",
+            "srcHost": 0,
+            "file": "119.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 120,
+            "title": "Дождевые облака",
+            "srcHost": 0,
+            "file": "120.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 121,
+            "title": "",
+            "srcHost": 0,
+            "file": "121.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 122,
+            "title": "Степной закат",
+            "srcHost": 0,
+            "file": "122.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 123,
+            "title": "",
+            "srcHost": 0,
+            "file": "123.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 124,
+            "title": "Стая птиц",
+            "srcHost": 0,
+            "file": "124.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 125,
+            "title": "",
+            "srcHost": 0,
+            "file": "125.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 126,
+            "title": "",
+            "srcHost": 0,
+            "file": "126.jpg",
+            "votes": 2,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 127,
+            "title": "",
+            "srcHost": 0,
+            "file": "127.jpg",
+            "votes": 1,
+            
+            "place": "Россия / Калмыкия / Элиста"
+        },
+        {
+            "id": 128,
+            "title": "Элиста",
+            "srcHost": 0,
+            "file": "128.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия / Элиста / Хурул"
+        },
+        {
+            "id": 129,
+            "title": "Элиста",
+            "srcHost": 0,
+            "file": "129.jpg",
+            "votes": 1,
+            
+            "place": "Россия / Калмыкия / Элиста / Хурул"
+        },
+        {
+            "id": 130,
+            "title": "Элиста",
+            "srcHost": 0,
+            "file": "130.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия / Элиста / Хурул"
+        },
+        {
+            "id": 131,
+            "title": "Розовая божьякоровка",
+            "srcHost": 0,
+            "file": "131.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия / Элиста"
+        },
+        {
+            "id": 132,
+            "title": "Элиста",
+            "srcHost": 0,
+            "file": "132.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия / Элиста"
+        },
+        {
+            "id": 133,
+            "title": "Элиста. Шахматный город",
+            "srcHost": 0,
+            "file": "133.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия / Элиста"
+        },
+        {
+            "id": 134,
+            "title": "",
+            "srcHost": 0,
+            "file": "134.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 135,
+            "title": "",
+            "srcHost": 0,
+            "file": "135.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 136,
+            "title": "",
+            "srcHost": 0,
+            "file": "136.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 137,
+            "title": "Ветровая электространция",
+            "srcHost": 0,
+            "file": "137.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 138,
+            "title": "",
+            "srcHost": 0,
+            "file": "138.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 139,
+            "title": "Гнезда птиц",
+            "srcHost": 0,
+            "file": "139.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 140,
+            "title": "Жуки",
+            "srcHost": 0,
+            "file": "140.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 141,
+            "title": "",
+            "srcHost": 0,
+            "file": "141.jpg",
+            "votes": 3,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 142,
+            "title": "",
+            "srcHost": 0,
+            "file": "142.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 143,
+            "title": "",
+            "srcHost": 0,
+            "file": "143.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 144,
+            "title": "",
+            "srcHost": 0,
+            "file": "144.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Калмыкия"
+        },
+        {
+            "id": 145,
+            "title": "",
+            "srcHost": 0,
+            "file": "145.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 146,
+            "title": "",
+            "srcHost": 0,
+            "file": "146.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 147,
+            "title": "",
+            "srcHost": 0,
+            "file": "147.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 148,
+            "title": "",
+            "srcHost": 0,
+            "file": "148.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 149,
+            "title": "",
+            "srcHost": 0,
+            "file": "149.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 150,
+            "title": "Пшеница",
+            "srcHost": 0,
+            "file": "150.jpg",
+            "votes": 2,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 151,
+            "title": "",
+            "srcHost": 0,
+            "file": "151.jpg",
+            "votes": 1,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 152,
+            "title": "",
+            "srcHost": 0,
+            "file": "152.jpg",
+            "votes": 0,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 153,
+            "title": "Совхоз имени Сараева",
+            "srcHost": 0,
+            "file": "153.jpg",
+            "votes": 2,
+            
+            "place": "Россия"
+        },
+        {
+            "id": 154,
+            "title": "",
+            "srcHost": 0,
+            "file": "154.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь"
+        },
+        {
+            "id": 155,
+            "title": "",
+            "srcHost": 0,
+            "file": "155.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь / Храм"
+        },
+        {
+            "id": 156,
+            "title": "",
+            "srcHost": 0,
+            "file": "156.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь / Мемориал Огонь Вечной Славы (доб. Алевтина)"
+        },
+        {
+            "id": 157,
+            "title": "",
+            "srcHost": 0,
+            "file": "157.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь / Солдат"
+        },
+        {
+            "id": 158,
+            "title": "",
+            "srcHost": 0,
+            "file": "158.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь / Ангел"
+        },
+        {
+            "id": 159,
+            "title": "Площадь. Ставраполь",
+            "srcHost": 0,
+            "file": "159.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь / Площадь Ленина"
+        },
+        {
+            "id": 160,
+            "title": "Гостиница Эльбрус. Ставраполь",
+            "srcHost": 0,
+            "file": "160.jpg",
+            "votes": 0,
+            
+            "place": "Гостиница \"Эльбрус\""
+        },
+        {
+            "id": 161,
+            "title": "Гостиница Эльбрус. Ставраполь",
+            "srcHost": 0,
+            "file": "161.jpg",
+            "votes": 0,
+            
+            "place": "Гостиница \"Эльбрус\""
+        },
+        {
+            "id": 162,
+            "title": "Ставрапольский жд вокзал",
+            "srcHost": 0,
+            "file": "162.jpg",
+            "votes": 0,
+            
+            "place": "Россия / Ставрополь / Железнодорожный вокзал"
+}];
+</script>
+</head>
+<body>
+<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+	style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+<div id='pb_viewPort'></div>
+</body>
+</html>

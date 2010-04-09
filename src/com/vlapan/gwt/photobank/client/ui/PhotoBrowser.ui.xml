@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.vlapan.gwt.photobank.client.ui.selector"
+	xmlns:p="urn:import:com.vlapan.gwt.photobank.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<!-- g:Button styleName="{style.important}" ui:field="button" / -->
+	<g:AbsolutePanel ui:field="main">
+		<g:FocusPanel ui:field="focusCatcher">
+			<p:PhotoView ui:field="photoView"></p:PhotoView>
+		</g:FocusPanel>
+		<c:ActionSelector ui:field="actionSelector"></c:ActionSelector>
+		<c:PhotoSelector ui:field="photoSelector"></c:PhotoSelector>
+		<c:AlbumSelector ui:field="albumSelector"></c:AlbumSelector>
+	</g:AbsolutePanel>
+</ui:UiBinder> 

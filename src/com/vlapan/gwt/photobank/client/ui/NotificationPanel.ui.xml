@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		/* Add CSS here. See the GWT docs on UI Binder for more details */
+		.general {
+			padding-top: 4px;
+			font-family: Arial;
+			background-color: #111;
+			opacity: 0;
+		}
+		
+		.title {
+			color: #ddd;
+			text-align: center;
+			font-size: 20px;
+		}
+		
+		.message {
+			color: #ddd;
+			text-align: center;
+			font-size: 16px;
+		}
+	</ui:style>
+	<g:SimplePanel ui:field="main" styleName="{style.general}"
+		height="56" visible="true">
+		<g:VerticalPanel ui:field="vp" width="100%">
+			<g:Label ui:field="title" styleName="{style.title}"></g:Label>
+			<g:Label ui:field="message" styleName="{style.message}"></g:Label>
+		</g:VerticalPanel>
+	</g:SimplePanel>
+</ui:UiBinder> 
